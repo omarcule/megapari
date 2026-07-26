@@ -56,22 +56,27 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: transparent;
-  border: 2px dashed rgba(255,255,255,0.25);
-  color: rgba(255,255,255,0.55);
   border-radius: 20px;
   padding: 40px 34px;
   cursor: pointer;
-  transition: transform .2s ease;
+  transition: transform .2s ease, opacity .2s ease;
 }
 
 #addBtn:active, #deleteBtn:active {
   transform: scale(0.96);
 }
 
+#addBtn {
+  background: rgba(60, 180, 110, 0.12);
+  border: 2px solid rgba(70, 200, 120, 0.45);
+  color: rgba(120, 230, 160, 0.9);
+}
+
 #deleteBtn {
-  border-color: rgba(255,80,80,0.3);
-  color: rgba(255,120,120,0.65);
+  background: rgba(220, 60, 60, 0.08);
+  border: 2px dashed rgba(220, 80, 80, 0.35);
+  color: rgba(255, 130, 130, 0.6);
+  padding: 28px 24px;
 }
 
 #addBtn .plus, #deleteBtn .plus {
@@ -80,7 +85,16 @@ html, body {
   font-weight: 300;
 }
 
+#deleteBtn .plus {
+  font-size: 26px;
+}
+
 #addBtn .label, #deleteBtn .label {
   font-size: 15px;
   letter-spacing: .3px;
+}
+
+#deleteBtn .label {
+  font-size: 13px;
+}
 }
